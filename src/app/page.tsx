@@ -50,11 +50,11 @@ export default async function Home() {
                 {session ? "Sign out" : "Sign in"}
               </Link>
             </div>
-
           </div>
-        </div>
-      </div>
 
-    </div>
+          {session?.user && <LatestPost />}
+        </div>
+      </main>
+    </HydrateClient>
   );
 }
