@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { LatestPost } from "~/app/_components/post";
 import { getServerAuthSession } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";
 import { DiGithubBadge } from "react-icons/di";
@@ -51,11 +50,11 @@ export default async function Home() {
                 {session ? "Sign out" : "Sign in"}
               </Link>
             </div>
-          </div>
 
-          {session?.user && <LatestPost />}
+          </div>
         </div>
-      </main>
-    </HydrateClient>
+      </div>
+
+    </div>
   );
 }
